@@ -1,0 +1,14 @@
+﻿.skeet-Lighter
+{
+    border-style: dashed;
+    border-width: 1px;
+    background-color: lightblue;
+}
+
+.skeet-Header
+{
+    background-image: url("https://www.gravatar.com/avatar/6d8ebb117e8d83d74ea95fbdd0f87e13?s=32&d=identicon&r=PG");
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 50px;
+}

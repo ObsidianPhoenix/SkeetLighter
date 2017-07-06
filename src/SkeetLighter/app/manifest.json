@@ -1,0 +1,48 @@
+{
+    "manifest_version": 2,
+
+    "name": "Skeet-Lighter",
+    "description": "This extension will highlight all Questions/Posts/Comments made by Jon Skeet on the StackExchange websites.",
+    "version": "1.0",
+    "icons": { "16" : "img/skeet16.png", "48" : "img/skeet48.png", "128" : "img/skeet128.png" },
+
+    "content_scripts": [
+    {
+        "matches": 
+        [ 
+            "*://stackoverflow.com/*", 
+            "*://meta.stackoverflow.com/*",
+            "*://superuser.com/*",
+            "*://programmers.stackexchange.com/*",
+            "*://serverfault.com/*",
+            "*://codereview.stackexchange.com/*",
+            "*://stackapps.com/*",
+            "*://codegolf.stackexchange.com/*",
+            "*://english.stackexchange.com/*",
+            "*://boardgames.stackexchange.com/*",
+            "*://webapps.stackexchange.com/*"
+        ],
+        "exclude_matches" : 
+        [
+            "*://stackoverflow.com/users/*", 
+            "*://meta.stackoverflow.com/users/*",
+            "*://meta.stackoverflow.com/users/*",
+            "*://superuser.com/users/*",
+            "*://programmers.stackexchange.com/users/*",
+            "*://serverfault.com/users/*",
+            "*://codereview.stackexchange.com/users/*",
+            "*://stackapps.com/users/*",
+            "*://codegolf.stackexchange.com/users/*",
+            "*://english.stackexchange.com/users/*",
+            "*://boardgames.stackexchange.com/users/*",
+            "*://webapps.stackexchange.com/users/*"
+        ],
+        "run_at": "document_end",
+        "js": ["jquery-2.0.3.min.js", "mutation-summary.js", "content.js"],
+        "css": ["Skeet-Lighter.css"],
+        "web_accessible_resources": ["jquery-2.0.3.min.js", "content.js"]
+    }
+    ] 
+}
+
+
